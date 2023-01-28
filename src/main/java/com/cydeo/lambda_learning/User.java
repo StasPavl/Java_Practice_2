@@ -2,14 +2,19 @@ package com.cydeo.lambda_learning;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+/*@AllArgsConstructor|
+@Getter              |     CAN WRITE ONLY @DATA
+@Setter              |
+@ToString            |
+*/
+
+
+@Data
 @AllArgsConstructor
-@Getter
-@Setter
-@ToString
+@NoArgsConstructor
 public class User {
 
     private String firstName;
