@@ -5,9 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/*@AllArgsConstructor|
-@Getter              |     CAN WRITE ONLY @DATA
-@Setter              |
+/*
+@Getter              |
+@Setter              |    CAN WRITE ONLY @DATA
 @ToString            |
 */
 
