@@ -17,7 +17,10 @@
       </plugin>
     </plugins>
   </build>
-  <packaging>jar</packaging>
+  <modules>
+    <module>double_colon_operators</module>
+  </modules>
+  <packaging>pom</packaging>
 
   <name>Java_Practice_2</name>
   <url>http://maven.apache.org</url>
