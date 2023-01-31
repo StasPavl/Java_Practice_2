@@ -40,5 +40,14 @@ public class StreamOperations {
                 .forEach(System.out::println);
 
         System.out.println("*******************************");
+
+        System.out.println("--------SKIP-----------");
+
+        numbers.stream()
+                .filter(i -> i % 2 ==0)
+                .distinct()
+                .skip(1)
+                .forEach(System.out::println);
+        System.out.println("*******************************");
     }
 }
