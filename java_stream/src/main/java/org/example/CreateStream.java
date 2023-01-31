@@ -1,10 +1,12 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Main {
+public class CreateStream {
     public static void main(String[] args) {
 
 
@@ -29,6 +31,14 @@ public class Main {
         );
         Stream<Course> myCoursesStream = myCourses.stream();
 
+        //Creating Stream Values
+
+        Stream<Integer> stream = Stream.of(1,2,3,4,5,6);
+
+        List<Integer> collect = stream.filter(s -> s > 2)
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
+        System.out.println(collect);
 
     }
 }
