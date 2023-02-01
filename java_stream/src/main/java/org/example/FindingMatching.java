@@ -78,5 +78,25 @@ public class FindingMatching {
         Optional<Dish> max = DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
         System.out.println(max.get());
 
+
+        System.out.println("-----REDUCE------");
+
+        Integer calTotal = DishData.getAll().stream()
+                .map(Dish::getCalories)
+                .reduce((a, b) -> a + b)
+
+
+                .get(); // using get method to convert from Optional object to integer
+
+        System.out.println(calTotal);
+
+        System.out.println("-----COUNT------");
+
+        long dishCount = DishData.getAll().stream().count();
+        System.out.println(dishCount);
+        long count = DishData.getAll().stream().map(Dish::getCalories).filter(x -> x > 450).count();
+        System.out.println(count);
+
+
     }
 }
