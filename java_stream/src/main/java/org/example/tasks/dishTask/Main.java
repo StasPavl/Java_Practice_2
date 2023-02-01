@@ -4,6 +4,7 @@ import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
+
 //Print all dishes name that has less than 400 calories
 
         DishData.getAll().stream()
@@ -24,17 +25,19 @@ public class Main {
 //Print three high caloric dish name(>300)
 
         DishData.getAll().stream()
+                .sorted(Comparator.comparing(Dish::getCalories).reversed())
                 .filter(x -> x.getCalories() > 300)
                 .map(Dish::getName)
                 .limit(3)
                 .forEach(System.out::println);
 
         System.out.println("-------------------------");
+
 //Print all dish name that are below 400 calories in sorted
 
         DishData.getAll().stream()
                 .filter(dish -> dish.getCalories() < 400)
-                .sorted(Comparator.comparing(Dish::getCalories))
+                .sorted(Comparator.comparing(Dish::getCalories).reversed())
                 .map(Dish::getName)
                 .forEach(System.out::println);
 
