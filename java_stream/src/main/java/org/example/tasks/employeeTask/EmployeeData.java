@@ -7,9 +7,9 @@ public class EmployeeData {
     public static Stream<Employee> readAll(){
 
         return Stream.of(
-                new Employee(100,"Mike","mile@cydeo.com", Arrays.asList("20222323434","3013331866")),
-                new Employee(101,"Ozzy","ozzy@cydeo.com", Arrays.asList("433223443434","2023331866")),
-                new Employee(102,"Peter","peter@cydeo.com", Arrays.asList("72022923434","8013331866"))
+                new Employee(100,"Mike","mike@cydeo.com", Arrays.asList("202-232-34-34","301-300-18-66")),
+                new Employee(101,"Ozzy","ozzy@cydeo.com", Arrays.asList("433-244-34-34","202-333-90-66")),
+                new Employee(102,"Peter","peter@cydeo.com", Arrays.asList("720-229-23-44","801-322-18-76"))
         );
     }
 }
