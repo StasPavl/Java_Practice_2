@@ -36,7 +36,9 @@ public class Main {
         BiFunction<String,Integer,String> func1 = String::substring;
         Function<Integer,Double> m1 = new MyClass()::method;
 
-        BiFunction<MyClass,Integer,Double> m2 = MyClass::method;
+        BiFunction<MyClass,Integer,Double> b4 = (x,y) -> new MyClass().method(y);
+
+
 
         Consumer<Integer> display1 = i -> System.out.println(i);
         Consumer<Integer> display = System.out::println;
