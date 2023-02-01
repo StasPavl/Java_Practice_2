@@ -3,6 +3,9 @@ package org.example;
 import org.example.tasks.dishTask.Dish;
 import org.example.tasks.dishTask.DishData;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
@@ -50,6 +53,30 @@ public class FindingMatching {
         System.out.println(IntStream.range(0,100).parallel().findAny().getAsInt());
         System.out.println(IntStream.range(0,100).parallel().findFirst().getAsInt());
 
+        List<String> list1 = Arrays.asList("Jhonny","David","Jack","Duke","Jill","Dany","Julia","Jenish","Divya");
+        List<String> list2 = Arrays.asList("Jhonny","David","Jack","Duke","Jill","Dany","Julia","Jenish","Divya");
+
+        /*
+                        PARALLEL meaning asyncronized, so running randomly
+        Optional<String> findFirst = list1.parallelStream().filter(s -> s.startsWith("D")).findFirst();
+        Optional<String> findAny = list2.parallelStream().filter(s -> s.startsWith("J")).findAny();
+        */
+
+        Optional<String> findFirst = list1.stream().filter(s -> s.startsWith("D")).findFirst();
+        Optional<String> findAny = list2.stream().filter(s -> s.startsWith("J")).findAny();
+
+        System.out.println(findFirst.get());
+        System.out.println(findAny.get());
+
+        System.out.println("-----MIN------");
+
+        Optional<Dish> min = DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
+        System.out.println(min.get());
+
+        System.out.println("-----MAX------");
+
+        Optional<Dish> max = DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+        System.out.println(max.get());
 
     }
 }
