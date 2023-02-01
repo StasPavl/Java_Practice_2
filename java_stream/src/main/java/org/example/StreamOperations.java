@@ -49,5 +49,19 @@ public class StreamOperations {
                 .skip(1)
                 .forEach(System.out::println);
         System.out.println("*******************************");
+
+        System.out.println("----------MAP-----------");
+
+        numbers.stream()
+                .distinct()
+                .map(x -> x*2)
+                .forEach(System.out::println);
+
+        numbers.stream()
+                .filter(integer -> integer%2==0)
+                .map(integer -> integer*3)
+                .forEach(System.out::println);
+
+        System.out.println("*******************************");
     }
 }
