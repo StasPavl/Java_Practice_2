@@ -19,5 +19,14 @@ public class Reducing {
         System.out.println(sum);
         System.out.println(result);
 
+
+        Integer integer = numbers.stream().reduce(Integer::min).get();
+        Integer integer1 = numbers.stream().reduce(Integer::max).get();
+        Integer integer2 = numbers.stream().reduce(Integer::sum).get();
+
+        System.out.println(integer);
+        System.out.println(integer1);
+        System.out.println(integer2);
+
     }
 }
