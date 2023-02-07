@@ -1,6 +1,7 @@
 package com.cydeo.bigDecimal;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class BigDecimalDemo {
     public static void main(String[] args) {
@@ -20,6 +21,13 @@ public class BigDecimalDemo {
         System.out.println(b1.subtract(b2));//0.30
         System.out.println(b3.subtract(b4));
         System.out.println(b5.add(b6));
+
+        System.out.println("------------------------");
+        System.out.println("*******SCALING*********");
+
+
+        BigDecimal number1 = new BigDecimal("23.12");
+        System.out.println(  number1.setScale(1, RoundingMode.FLOOR));
 
 
 
