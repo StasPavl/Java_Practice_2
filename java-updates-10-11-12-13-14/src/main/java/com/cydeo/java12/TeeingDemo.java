@@ -30,6 +30,7 @@ public class TeeingDemo {
                     return map;
                 }
         ));
+
         System.out.println(result);
 
     }

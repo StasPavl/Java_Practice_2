@@ -6,6 +6,7 @@ class Employee{
     private int salary;
 
     @Override
+
     public String toString() {
         return "Employee{" +
                 "id=" + id +
