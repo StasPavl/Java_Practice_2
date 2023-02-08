@@ -11,7 +11,7 @@ public class OrElseThrowDemo {
          */
 
         Optional<String> str = Optional.empty();
-        System.out.println(str.get());
+        System.out.println(str.get()); // give us exception
 
         if (str.isPresent()){
             System.out.println(str.get());
