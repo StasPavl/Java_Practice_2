@@ -9,6 +9,7 @@ import static java.util.function.Predicate.not;
 
 public class PredicateNotDemo {
     public static void main(String[] args) {
+
         /**
          * The Predicate.not() static method has been added to Java 11 in order to negate an existing Predicate.
          */
