@@ -30,6 +30,7 @@ public class LocalVariableTypeDemo {
         var sum = 0;
         for (var each : listOfNumbers){
             sum = sum+each;
+
         }
     }
 }
