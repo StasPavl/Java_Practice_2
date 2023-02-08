@@ -6,6 +6,8 @@ public class FactoryMethodsDemo {
     public static void main(String[] args) {
 
         /**
+         * To create immutable collection
+         * added .of() method
          * Its mean READ ONLY
          * You can use it, but you can not modify
          */
